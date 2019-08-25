@@ -1,0 +1,10 @@
+<!--pages/2019.08.26/2019.08.26.wxml-->
+<view style="overflow:hidden;margin-top:500px">
+ <view style="float:left">
+ 人物简介
+ </view>
+ <view bindtap="change" style="background-color: #fafafa;padding:20px;border: 1px #333 solid;float:right;border-radius:10px">
+ 点击
+ </view>
+</view>
+<input placeholder="请输入人物简介" focus="{{!disabled}}" disabled="{{disabled}}"/>

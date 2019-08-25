@@ -1,0 +1,15 @@
+/* pages/2019.08.21/2019.08.21.wxss */
+.img{
+  width: 400rpx;
+  height: 2000px;
+}
+
+.wx-swiper-dot::before{
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.wx-swiper-dot-active::before{
+  background:rgba(244,0,0,0.8) !important;  
+  width: 100px;
+}

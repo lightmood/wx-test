@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "poster": "/miniprogram_npm/wxa-plugin-canvas/poster/index"
+  }
+}

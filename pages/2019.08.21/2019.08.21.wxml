@@ -1,0 +1,32 @@
+<!-- pages/2019.08.21/2019.08.21.wxml -->
+<!-- <view class="">
+  <image style="position:absolute;" src="https://dummyimage.com/200x100/50B347/FFF&text=wxhy" mode="widthFix"></image>
+  <view style="font-size:60px;position:relative">前面</view>
+</view> -->
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" next-margin="450rpx">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" mode="aspectFit" class="img" style="padding-left:10px"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<image class="img" src="./lbt.png" mode="widthFix"  style="margin:10px 0 0 10px"></image>
+
+<image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+  
+</image>
+
+<!-- <view style="width:200px;clear:both">
+  <view style="float:left">
+    leftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleft
+  </view>
+  <view style="float:right">
+    rightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightright
+  </view>
+  <view style="clear:both">
+    
+  </view>
+</view>
+<view class=""></view> -->
+

@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/2019.08.28/2019.08.28",
+    "pages/2019.08.27/2019.08.27",
+    "pages/2019.08.26/2019.08.26",
+    "pages/2019.08.25/2019.08.25",
+    "pages/2019.08.21/2019.08.21",
+    "pages/canvas/canvas",
+    "pages/share/share",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

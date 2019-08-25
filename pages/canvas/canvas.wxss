@@ -1,0 +1,6 @@
+/**index.wxss**/
+.myCanvas {
+  width: 750rpx;
+  height: 750rpx;
+  margin: 0 auto;
+}

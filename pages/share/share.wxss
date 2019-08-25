@@ -1,0 +1,38 @@
+.van-transition {
+  background-color: rgba(0, 0, 0, .5) !important;
+}
+
+.view-style{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: normal;
+  font-size:inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  background-color: #fff;
+}
+
+.view-style::after {
+  border: none;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+.item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.myCanvas {
+  width: 300px;
+  height: 600px;
+}

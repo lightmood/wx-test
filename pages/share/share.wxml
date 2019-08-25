@@ -1,0 +1,29 @@
+<!-- index.wxml -->
+<view class="container">
+  <van-button bind:click="toggleActionSheet1">弹出带取消按钮的 ActionSheet</van-button>
+  <!-- <van-action-sheet show="{{ show1 }}" actions="{{ actions }}" cancel-text="取消" bind:close="toggleActionSheet1" bind:cancel="toggleActionSheet1" bind:select="toggleActionSheet1" /> -->
+  <van-action-sheet show="{{ show1 }}" cancel-text="取消" bind:close="toggleActionSheet1" bind:cancel="toggleActionSheet1" bind:select="toggleActionSheet1">
+    <view class="main">
+      <button class='item view-style' id="shareBtn" open-type="share" hover-class="none">
+        <image src='https://dummyimage.com/200x100/50B347/FFF&text=wxhy' style="width:100rpx;height:100rpx"></image>
+        微信好友
+      </button>
+      <view class="item" bindtap="onPopupShow">
+        <image src='https://dummyimage.com/200x100/50B347/FFF&text=pyq' style="width:100rpx;height:100rpx"></image>
+        朋友圈
+      </view>
+    </view>
+  </van-action-sheet>
+
+  <van-popup show="{{ show2 }}" bind:close="onPopupClose">
+    <canvas class='myCanvas' canvas-id="myCanvas"></canvas>
+  </van-popup>
+
+
+
+  <picker mode="date" fields="month" value="{{date}}" start="2015-09-01" end="2019-08-19" bindchange="bindDateChange">
+    <view class="picker">
+      <button type="default">小程序原生按钮</button>
+    </view>
+  </picker>
+</view>

@@ -1,0 +1,18 @@
+<view class="container">
+    <!-- tab导航栏 -->
+    <view class="nav">
+      <block wx:for="{{navData}}" wx:key="{{index}}">
+            <view class="nav-item {{currentTab == index ?'active':''}}"  data-current="{{index}}" bindtap="switchNav">{{item}}</view>
+        </block>
+    </view>
+    <!-- 页面内容 -->
+    <swiper class="tabs-box" current="{{currentTab}}" duration="300" bindchange="switchTab">        
+        <swiper-item wx:for="{{navData}}" wx:key="{{index}}" class="tab-content">
+          <scroll-view scroll-y="true" class="scroll-h">
+            <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]}}">
+                {{item}}
+              </view>
+          </scroll-view> 
+        </swiper-item>
+    </swiper>
+</view>
