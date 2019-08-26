@@ -1,0 +1,15 @@
+<!-- pages/movable-view/movable-view.wxml -->
+<view style="height: 50px;width: 750rpx;text-align: center">头部</view>
+<view style="position: relative">
+    <movable-area class="{{moveableClassName}}" style="height: {{windowHeight}}px;width: 750rpx;position:absolute;top:0;z-index:2">
+        <movable-view direction="all" animation="{{false}}" damping="9999" friction="9999" style="height: 50px; width: 750rpx; box-shadow: 0 40rpx 40rpx 0 rgba(0,0,0,0.04);background: #fff;border-bottom: 1px #333 solid" x="{{movableViewPosition.X}}" y="{{movableViewPosition.Y}}"></movable-view>
+    </movable-area>
+    <scroll-view style="height: {{windowHeight}}px;" scroll-top="{{scrollTop}}" scroll-y="{{scrollY}}" bindscroll="scrollfunc">
+        <block wx:for="{{list}}" wx:key="{{index}}">
+            <view style="height: 50px; width: 750rpx; background: #fff;border-bottom: 1px #333 solid" catchlongpress="longpressfunc" bindtouchmove="touchmovefunc" catchtouchend="touchendfunc">
+                {{item}}
+            </view>
+        </block>
+    </scroll-view>
+</view>
+<view style="height: 50px;width: 750rpx;text-align: center">尾部</view>

@@ -1,2 +1,7 @@
-<!--pages/2019.08.28/2019.08.28.wxml-->
-<text>pages/2019.08.28/2019.08.28.wxml</text>
+<!-- pages/2019.08.28/2019.08.28.wxml -->
+<van-popup show="{{ show }}" bind:close="onPopupClose">
+    <view>
+        <input type="text" style="margin-top:500px" />
+    </view>
+</van-popup>
+<van-button bind:click="toggleActionSheet">弹出带取消按钮的 ActionSheet</van-button>

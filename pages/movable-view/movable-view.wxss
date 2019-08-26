@@ -1,0 +1,21 @@
+/* pages/movable-view/movable-view.wxss */
+.hidden,
+.none {
+    display: none !important;
+}
+
+.moveable_row {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.moveable_row .edit_row {
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2)
+}
+
+.moveable_row .edit_row_show {
+    box-shadow: 0 30rpx 30rpx 0 rgba(0, 0, 0, 0.12);
+}

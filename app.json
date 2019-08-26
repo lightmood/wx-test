@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/movable-view/movable-view",
     "pages/2019.08.28/2019.08.28",
     "pages/2019.08.27/2019.08.27",
     "pages/2019.08.26/2019.08.26",
