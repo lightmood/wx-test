@@ -4,9 +4,39 @@ Page({
     windowHeight: 0,
     windowWidth: 0,
     moveableClassName: 'none',
-    list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    list: [{
+      text: 'text1'
+    }, {
+      text: 'text2'
+    }, {
+      text: 'text3'
+    }, {
+      text: 'text4'
+    }, {
+      text: 'text5'
+    }, {
+      text: 'text6'
+    }, {
+      text: 'text7'
+    }, {
+      text: 'text8'
+    }, {
+      text: 'text9'
+    }, {
+      text: 'text10'
+    }, {
+      text: 'text11'
+    }, {
+      text: 'text12'
+    }, {
+      text: 'text13'
+    }, {
+      text: 'text14'
+    }, {
+      text: 'text15'
+    }],
 
-
+    selectIndex: -1,
     scrollY: true,
     movableViewPosition: {
       X: 0,
@@ -29,39 +59,68 @@ Page({
     })
   },
   longpressfunc(e) {
-    this.data.distY = e.touches[0].pageY - e.currentTarget.offsetTop + this.data.scrollTop
+    this.data.distY = e.touches[0].pageY - e.currentTarget.offsetTop + this.data.scrollTop;
     this.setData({
       scrollY: false,
       moveableClassName: '',
       'movableViewPosition.Y': e.currentTarget.offsetTop - this.data.scrollTop,
+      selectIndex: e.currentTarget.dataset.index,
+      selectData: e.currentTarget.dataset.text + '选中值'
     })
+
+    this.data.firstY = e.touches[0].pageY;
+
+
+    console.log(this.data.selectIndex);
+    this.data.longpress = true;
+    wx.vibrateShort();
   },
   touchendfunc(e) {
     this.setData({
       moveableClassName: 'none',
-      scrollY: true
+      scrollY: true,
+      selectIndex: -1,
+      longpress: false
     })
   },
   touchmovefunc(e) {
-    console.log(e)
 
-    if (e.touches[0].pageY - this.data.distY < 0 && this.data.scrollTop > 0) {
-      var scrollTop = this.data.scrollTop - 50 < 0 ? 0 : this.data.scrollTop - 50
+    if (this.data.longpress) {
+      //替换位置
+      var list = this.data.list;
+      var index = this.data.selectIndex;
+      var data = this.data.list[this.data.selectIndex];
+
+      if (!data) {
+        console.log(list, data, index)
+      }
+
+      if (e.touches[0].pageY - this.data.firstY < -25) {
+        list.splice(index, 1);
+        list.splice(--index, 0, data);
+        this.setData({
+          list: list,
+          selectIndex: index
+        })
+        this.data.firstY -= 50
+        wx.vibrateShort();
+      } else if (e.touches[0].pageY - this.data.firstY > 25) {
+        list.splice(index, 1);
+        list.splice(++index, 0, data);
+        this.setData({
+          list: list,
+          selectIndex: index
+        })
+        this.data.firstY += 50
+        wx.vibrateShort();
+      }
+
       this.setData({
-        scrollTop: scrollTop
-      })
-    } else if (e.touches[0].pageY - this.data.distY > this.data.windowHeight && this.data.scrollTop > 0) {
-      var scrollTop = this.data.scrollTop + 50 < 0 ? 0 : this.data.scrollTop + 50
-      this.setData({
-        scrollTop: scrollTop
+        'movableViewPosition.Y': e.touches[0].pageY - this.data.distY,
       })
     }
-    // console.log(e)
-    this.setData({
-      'movableViewPosition.Y': e.touches[0].pageY - this.data.distY,
-      // 'movableViewPosition.Y': e.currentTarget.offsetTop,
-    })
   },
+
   // touchstartfunc(e) {
   //   console.log(e)
   // },

@@ -19,3 +19,7 @@
 .moveable_row .edit_row_show {
     box-shadow: 0 30rpx 30rpx 0 rgba(0, 0, 0, 0.12);
 }
+
+.dragSelected {
+    background-color: #333 !important;
+}
