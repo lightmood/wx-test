@@ -95,7 +95,7 @@ Page({
         console.log(list, data, index)
       }
 
-      if (e.touches[0].pageY - this.data.firstY < -25) {
+      if (e.touches[0].pageY - this.data.firstY < -25 && index > 0) {
         list.splice(index, 1);
         list.splice(--index, 0, data);
         this.setData({
@@ -104,7 +104,7 @@ Page({
         })
         this.data.firstY -= 50
         wx.vibrateShort();
-      } else if (e.touches[0].pageY - this.data.firstY > 25) {
+      } else if (e.touches[0].pageY - this.data.firstY > 25 && index < list.length - 1) {
         list.splice(index, 1);
         list.splice(++index, 0, data);
         this.setData({
