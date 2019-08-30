@@ -35,7 +35,7 @@ Page({
           blocks: [{
             backgroundColor: '#fff',
             width: 690,
-            height: 690,
+            height: 630,
             x: 30,
             y: 30,
             opacity: 1,
@@ -88,26 +88,9 @@ Page({
               baseLine: 'middle',
               textAlign: 'right',
               zIndex: 2,
-              text: [{
-                //   textAlign: 'right',
-                //   text: '2019-07-23',
-                //   fontSize: 28,
-                //   color: '#929292',
-                // },
-                // {
-                //   textAlign: 'right',
-                //   text: '08:56',
-                //   fontSize: 28,
-                //   color: '#929292',
-                //   // marginLeft: 30,
-                // },
-                // {
-                textAlign: 'right',
-                text: '天鸟烈火投顾团队',
-                fontSize: 28,
-                color: '#929292',
-                marginRight: 30,
-              }, ]
+              text: '2019-07-23  08:56  天鸟烈火投顾团队',
+              fontSize: 30,
+              color: '#929292'
             },
             {
               x: 60,
@@ -123,7 +106,7 @@ Page({
             },
             {
               x: 540,
-              y: 600,
+              y: 540,
               baseLine: 'top',
               textAlign: 'right',
               text: '长按识别',
@@ -133,12 +116,22 @@ Page({
             },
             {
               x: 540,
-              y: 630,
+              y: 570,
               baseLine: 'top',
               textAlign: 'right',
               text: '查看详情',
               fontSize: 24,
               color: '#929292',
+              zIndex: 2
+            },
+            {
+              x: 375,
+              y: 710,
+              baseLine: 'middle',
+              textAlign: 'center',
+              text: '山西证券',
+              fontSize: 32,
+              color: '#fff',
               zIndex: 2
             },
           ],
@@ -155,7 +148,7 @@ Page({
               width: 120,
               height: 120,
               x: 570,
-              y: 570,
+              y: 510,
               borderRadius: 120,
               url: res,
               zIndex: 2
