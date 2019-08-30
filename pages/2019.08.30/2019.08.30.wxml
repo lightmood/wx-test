@@ -1,0 +1,4 @@
+<!-- pages/2019.08.27/2019.08.27.wxml -->
+<poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail"></poster>
+<button bindtap="onCreatePoster">sc</button>
+<image src="{{img}}" style="width:750rpx;height:750rpx" mode="widthFix"></image>
